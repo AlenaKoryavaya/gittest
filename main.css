@@ -1,9 +1,22 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-size: 16px;
+}
+
 body {
-  background-color: rgb(152, 162, 171);
-}
-p {
-  color: blue;
-}
-div {
   text-align: center;
+}
+.btn {
+  margin: 50px 0;
+  width: 100px;
+  height: 40px;
+  border-radius: 5%;
+  border: none;
+}
+.btn:hover {
+  background-color: rgb(182, 188, 186);
+}
+.btn:active {
+  background-color: rgb(127, 135, 132);
 }
