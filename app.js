@@ -1,21 +1,42 @@
 const btn = document.querySelector("#btn");
-let output = document.querySelector("#output");
+let textMotiv = document.querySelector("#text");
+let authorMotiv = document.querySelector("#author");
 
-let wishes = [
-  "That sounds good",
-  "Yes, you should definitely do that",
-  "I'm not sure that's a great idea",
-  "Maybe not today?",
-  "Computer says no.",
+const motivation = [
+  {
+    text: "Чем усерднее вы работаете, тем более удачливым вы становитесь.",
+    author: "Томас Джефферсон",
+  },
+  {
+    text: "Интеллект — это способность быстро приспосабливаться к изменениям.",
+    author: "Стивен Хокинг",
+  },
+  {
+    text: "Если вы работаете над чем-то, что вас заводит, вам не нужен удар. Миссия ведет вас.",
+    author: "Стив Джобс",
+  },
+  {
+    text: "Не меняя направления, ты остаешься на том же месте.",
+    author: "Лао-цзы",
+  },
+  {
+    text: "Совершенство недостижимо, но если вы стремитесь к нему, вы можете достичь совершенства.",
+    author: "Винс Ломбарди",
+  },
+  {
+    text: "Пренебрегая подготовкой, вы готовитесь к поражению.",
+    author: "Бенджамин Франклин",
+  },
 ];
 
-function yourWish(array) {
-  document.querySelector("#btn").addEventListener("click", () => {
-    function getWish() {
-      document.querySelector("#output").innerHTML =
-        array[Math.floor(Math.random() * 5)];
+function getMotivation(array) {
+  btn.addEventListener("click", () => {
+    function generateList() {
+      let randomInd = array[Math.floor(Math.random() * 6)];
+      textMotiv.innerHTML = randomInd.text;
+      authorMotiv.innerHTML = randomInd.author;
     }
-    getWish();
+    generateList();
   });
 }
-yourWish(wishes);
+getMotivation(motivation);
