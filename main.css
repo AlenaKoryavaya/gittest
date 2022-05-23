@@ -5,20 +5,30 @@
 }
 
 body {
+  height: 100vh;
   text-align: center;
+  background: linear-gradient(45deg, #a1ffce, #f9ffd1) center no-repeat;
 }
 .btn {
   margin: 50px 0;
-  width: 100px;
-  height: 40px;
-  border-radius: 5%;
-  border: none;
+  font-size: 20px;
+
+  width: 150px;
+  height: 45px;
+
+  border-radius: 8%;
+  border: 4px solid #fff;
+  cursor: pointer;
+
+  color: #cac6c6;
+  background: none;
+  box-shadow: 1px 4px 10px 1px rgb(34 60 80 / 20%);
 }
 .btn:hover {
-  background-color: rgb(182, 188, 186);
+  background-color: #f9ffd1;
 }
 .btn:active {
-  background-color: rgb(127, 135, 132);
+  background-color: #f6f9e7;
 }
 
 /* Output */
@@ -27,18 +37,21 @@ body {
 
   width: 400px;
   height: 300px;
-  background: rgb(194 192 193);
+  background: rgb(255 255 255);
+
   margin: auto;
-  border-radius: 5%;
   padding: 80px 30px;
+
+  border-radius: 5%;
+  box-shadow: 4px 6px 10px 1px rgb(34 60 80 / 20%);
 }
 .list__text {
-  color: #fff;
+  color: rgb(130, 123, 123);
   font-size: 22px;
 }
 .list__author {
-  color: crimson;
   padding-top: 20px;
-  font-size: 20px;
   text-align: end;
+  color: #158b2d;
+  font-size: 20px;
 }
